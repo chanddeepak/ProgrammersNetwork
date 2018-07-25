@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-//Create Schema
+// Create Schema
 const ProfileSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: "users"
   },
   handle: {
-    type: String.length,
+    type: String,
     required: true,
     max: 40
   },
@@ -32,7 +32,7 @@ const ProfileSchema = new Schema({
   bio: {
     type: String
   },
-  githubUsername: {
+  githubusername: {
     type: String
   },
   experience: [
